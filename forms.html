@@ -1,0 +1,65 @@
+﻿<!DOCTYPE>
+<html>
+<head></head>
+<body>
+	<form id="subscribe_form" method="post" action="https://adderra.com/wp-content/themes/Adderra-theme/inc/cont-test.php" novalidate="novalidate">
+						<div class="flex-1em items-center center child-mb-2em child-mb-0-md">
+							<div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+								<div class="form-group">
+									<input type="text" class="form-control" id="name" name="reName" autocomplete="off" placeholder="Ваше имя *" required="">
+									<label for="name" style="display: none;"></label>
+								</div>
+							</div>
+							<div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+								<div class="form-group">
+									<input type="email" class="form-control" id="reEmail" name="reEmail" placeholder="E-mail *" autocomplete="off" required="">
+									<label for="reEmail" style="display: none;"></label>
+								</div>
+							</div>
+							<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcpV-UdAAAAAIuVU1AZRXGmM_P5Scfn_4iIv0Ss"></div>
+							<div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+								<div class="pl-1em-sm">
+									<button class="bordered-button inverse-color" type="submit">Напишите мне</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					
+					
+	<form id="pageContactForm" method="POST" class="page-form" action="https://adderra.com/wp-content/themes/Adderra-theme/inc/contact-page-mail.php" novalidate="novalidate">
+								<div class="flex-0_5em items-center pt-0_8em">
+									<div class="col-xs-12 col-sm-12 form-group">
+										<label for="name" style="display: none;"></label>
+										<input type="text" name="cName" class="form-control" id="name" placeholder="Ваше имя*" required="">
+									</div>
+									<div class="col-xs-12 col-sm-12 form-group">
+										<label for="phone" style="display: none;"></label>
+										<input type="tel" name="cPhone" class="form-control spaceNumber" id="phone" placeholder="Ваш телефон">
+									</div>
+									<div class="col-xs-12 col-sm-12 form-group">
+										<label for="email" style="display: none;"></label>
+										<input type="email" name="cEmail" class="form-control" id="email" placeholder="Email*" required="">
+									</div>
+									<div class="col-xs-12 col-sm-12 form-group">
+										<label for="message" style="display: none;"></label>
+										<textarea name="cMessage" class="form-control form-desc" id="message" placeholder="Ваше сообщение*" required=""></textarea>
+									</div>
+									<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcpV-UdAAAAAIuVU1AZRXGmM_P5Scfn_4iIv0Ss"></div>
+									<div class="col-xs-12 col-sm-12">
+										<button id="formButton" type="submit" name="enter">Отправить сообщение</button>
+									</div>
+								</div>
+							</form>	
+							<!--capcha-->
+							<script src="https://www.google.com/recaptcha/api.js" async defer></script>	
+
+							<script language="php">
+						        if ($_POST['enter'] ) {
+						        	if (!$_POST['g-recaptcha-response'])
+						        		exit('Заполните капчу');
+						        }
+						        
+						    </script>	
+</body>
+</html>
+				
